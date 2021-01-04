@@ -1,0 +1,107 @@
+
+$font_path: '/assets/fonts/';
+
+@font-face {
+    font-family: "NotoSansKR";
+	src: local(※),
+	url( $font_path + 'NotoSansKR-Light.eot?#iefix') format('embedded-opentype'),
+	url( $font_path + 'NotoSansKR-Light.woff') format('woff'),
+	url( $font_path + 'NotoSansKR-Light.woff2') format('woff2'),
+	url( $font_path + 'NotoSansKR-Light.otf') format('opentype');
+	font-weight: 200;  
+	font-style: normal; 
+}
+
+
+@font-face {
+    font-family: "NotoSansKR";
+	src: local(※),
+	url( $font_path + 'NotoSansKR-Regular.eot?#iefix') format('embedded-opentype'),
+	url( $font_path + 'NotoSansKR-Regular.woff') format('woff'),
+	url( $font_path + 'NotoSansKR-Regular.woff2') format('woff2'),
+	url( $font_path + 'NotoSansKR-Regular.otf') format('opentype');
+	font-weight: 400;  
+	font-style: normal; 
+}
+
+
+
+@font-face {
+    font-family: "NotoSansKR";
+	src: local(※),
+	url( $font_path + 'NotoSansKR-Medium.eot?#iefix') format('embedded-opentype'),
+	url( $font_path + 'NotoSansKR-Medium.woff') format('woff'),
+	url( $font_path + 'NotoSansKR-Medium.woff2') format('woff2'),
+	url( $font_path + 'NotoSansKR-Medium.otf') format('opentype');
+	font-weight: 600;  
+	font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: "NotoSansKR";
+	src: local(※),
+	url( $font_path  + 'NotoSansKR-Bold.eot?#iefix') format('embedded-opentype'),
+	url( $font_path  + 'NotoSansKR-Bold.woff') format('woff'),
+	url( $font_path  + 'NotoSansKR-Bold.woff2') format('woff2'),
+	url( $font_path  + 'NotoSansKR-Bold.ttf') format('truetype');
+	font-weight: 800;  
+	font-style: normal;
+}
+
+
+@font-face {
+    font-family: "Montserrat";
+	src: local(※),
+	url( $font_path + 'Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
+	url( $font_path + 'Montserrat-Medium.woff') format('woff'),
+	url( $font_path + 'Montserrat-Medium.woff2') format('woff2'),
+	url( $font_path + 'Montserrat-Medium.otf') format('opentype');
+	font-weight: 500;  
+	font-style: normal;
+	font-display: swap;
+}
+ 
+
+
+@font-face {
+    font-family: "Metal";
+	src: local(※),
+	url( $font_path + 'Metal-Reg.eot?#iefix') format('embedded-opentype'),
+	url( $font_path + 'Metal-Reg.woff') format('woff'),
+	url( $font_path + 'Metal-Reg.woff2') format('woff2'),
+	url( $font_path + 'Metal-Reg.otf') format('opentype');
+	font-weight: 400;  
+	font-style: normal;
+	font-display: swap;
+}
+ 
+@font-face {
+    font-family: "Michroma";
+	src: local(※),
+	url( $font_path + 'Michroma.eot?#iefix') format('embedded-opentype'),
+	url( $font_path + 'Michroma.woff') format('woff'),
+	url( $font_path + 'Michroma.woff2') format('woff2'),
+	url( $font_path + 'Michroma.otf') format('opentype');
+	font-weight: 400;  
+	font-style: normal;
+}
+
+
+
+//폰트추가 및 사이트
+//https://emperia.co.uk/ 
+
+
+/*국문 폰트 */
+%noto-m{ font-family: "NotoSansKR"; font-weight: 600; letter-spacing: -1px; }
+%noto-d{ font-family: "NotoSansKR"; font-weight: 300; letter-spacing: -1px; }
+%noto-r{ font-family: "NotoSansKR"; font-weight: 400;  letter-spacing: -1px;}
+%noto-b{ font-family: "NotoSansKR"; font-weight: bold;  letter-spacing: -1px; }
+// %jeju-h{ font-family: "JejuHallasan";   font-weight: bold; letter-spacing: -1px;}
+
+/*영문 폰트*/
+.ms{ font-family: "Montserrat";   font-weight: 500; letter-spacing: -1px;}
+.mt{ font-family: "Metal";   font-weight: 400; letter-spacing: -1px;}
+.pL{ font-family: "Michroma";  font-weight: 400;  letter-spacing: -1px; }

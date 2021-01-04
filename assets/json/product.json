@@ -1,0 +1,89 @@
+{
+    "visualItemList": [
+      {
+        "enTitle": "LG SIGNATURE GLOBAL",
+        "koTitle": "LG 시그니처 글로벌 홈페이지",
+        "urlLink": "https://www.lg.com/global/lg-signature",
+        "siteType": "Website"
+      },
+      {
+        "enTitle": "PAMPERS",
+        "koTitle": "팸퍼스 홈페이지",
+        "urlLink": "http://www.pampers.co.kr/",
+        "siteType": "Website"
+      },
+      {
+        "enTitle": "SHANY",
+        "koTitle": "샤니 기업 홈페이지",
+        "urlLink": "https://shany.co.kr/",
+        "siteType": "Website"
+      },
+      {
+        "enTitle": "GUUD.COM",
+        "koTitle": "굳닷컴 홈페이지",
+        "urlLink": "https://guud.com",
+        "siteType": "Website"
+      }
+    ],
+    "protflioItemList": [
+      {
+        "thumbSrc": "thumb_01.jpg",
+        "enTitle": "Toxnfill",
+        "companyName": "톡스앤필의원",
+        "urlLink": "wwww.toxnfill.com"
+      },
+      {
+        "thumbSrc": "thumb_02.jpg",
+        "enTitle": "madforgilc",
+        "companyName": "매드포갈릭",
+        "urlLink": "wwww.toxnfill.com"
+      },
+      {
+        "thumbSrc": "thumb_03.jpg",
+        "enTitle": "리니지M",
+        "companyName": "NC SOFT",
+        "urlLink": "wwww.toxnfill.com"
+      },
+      {
+        "thumbSrc": "thumb_04.jpg",
+        "enTitle": "카비",
+        "companyName": "(주)웨이버스",
+        "urlLink": "www.carby.com"
+      },
+      {
+        "thumbSrc": "thumb_05.jpg",
+        "enTitle": "펀비어킹",
+        "companyName": "(주)펀앤아이",
+        "urlLink": "www.funbeerking.com"
+      },
+      {
+        "thumbSrc": "thumb_06.jpg",
+        "enTitle": "bmw 드라이빙센터",
+        "companyName": "BMW",
+        "urlLink": "https://www.bmw-driving-center.co.kr/kr/index.do"
+      },
+      {
+        "thumbSrc": "thumb_07.jpg",
+        "enTitle": "숨랩",
+        "companyName": "(주)숨랩",
+        "urlLink": "https://www.soomlab.co.kr/"
+      },
+      {
+        "thumbSrc": "thumb_08.jpg",
+        "enTitle": "hodooenglish",
+        "companyName": "(주)호두랩스",
+        "urlLink": "https://hodooenglish.com/"
+      },
+      {
+        "thumbSrc": "thumb_09.jpg",
+        "enTitle": "시몬스",
+        "companyName": "(주)시몬스",
+        "urlLink": "http://www.simmons.co.kr/"
+      }
+    ]
+
+
+
+
+
+  }

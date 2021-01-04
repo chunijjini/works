@@ -1,0 +1,156 @@
+@import "_reset.scss";
+@import "_fonts.scss"; 
+@import "common.scss"; 
+
+
+#contents{ position: relative; z-index: 3; 
+    .contents__area{ position: relative; top:0; left:0; width: 100%; height: 100vh;
+        .intro__overlay{ position: absolute; top:0; left:0; width: 100%; height: 100%; color: #fff; z-index: 400; pointer-events: none; }
+        .intro__content{ color: #1d1d1d;
+            .intro__grid{ position: absolute; top:10rem; left:50%; width: 50%; z-index: 5;
+                .intro__text{
+                    .text__rarge{ padding:2.22222rem; font-size:2rem; font-weight: 200; text-transform: none; @extend .ms;
+                        p{
+                            .text--nowrap{ white-space:nowrap;
+                                .underline{ display: inline-block; position: relative;
+                                    .underline__line{ position: absolute; bottom:.2em; left:0; width:100%; height:0;
+                                        &:before{ content: ''; position: absolute; top:0; left:0; width: 100%; height: 0; border-bottom: 2px solid;}
+                                    }
+                                }
+                            }
+                            .ele__break{ display: inline-block; width:1px; height: 1px;}
+                            .ele__highlight{ display: inline-block; position: relative;  color: #4478c4; cursor: pointer;
+                                .underline__line{ position: absolute; bottom:.2em; left:0; width:100%; height:0;
+                                    &:before{ content: ''; position: absolute; top:0; left:0; width: 100%; height: 0; border-bottom: 2px solid; animation: underlineHighlight 5s cubic-bezier(.475,.425,0,.995) infinite; }
+                                }
+                            }
+                        }
+                    } 
+                }
+            }
+            .intro__text--final{ position: absolute; top: -1.33333rem; left: -1.11111rem; width: calc(100% + -2.05556rem);
+                height: 100%; padding: 2.22222rem; font-size: 13.88889rem; display: -webkit-box; display: flex;
+                -webkit-box-align: end;  align-items: flex-end; -webkit-box-pack: justify; justify-content: space-between;
+                line-height: 1; opacity: 1;  white-space: nowrap;
+                span{  line-height: 1; @extend .ms }
+            }
+        }
+        .intro__video{ position: absolute; top: 0; left: 0; width: 50%;  height: 100%;  z-index: 100; overflow: hidden;
+            video{ position: absolute; width: auto; height: 100%; top:0px; left:-353px;}
+            .video__text{ position: absolute; top: 0; left: 0; width: 100vw; height: 100%; pointer-events: none; z-index: 2; color: #fff;
+                .intro__text--final{ position: absolute; top: -1.33333rem; left: -1.11111rem; width: calc(100% + -2.05556rem);
+                    height: 100%; padding: 2.22222rem; font-size: 13.88889rem; display: -webkit-box; display: flex;
+                    -webkit-box-align: end;  align-items: flex-end; -webkit-box-pack: justify; justify-content: space-between;
+                    line-height: 1; opacity: 1;  white-space: nowrap;
+                    span{ color: #fff; line-height: 1; @extend .ms }
+                }
+            }
+        }
+        .intro__circle_wrapper{ position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            .intro_circle{ position: absolute; top: 0;left: 0; -webkit-transform-origin: center center;  transform-origin: center center;
+                border-radius: 50%; overflow: hidden; width: 150vh; height: 150vh;
+                opacity: 0; pointer-events: none; color: #fff;  background-image: url( /assets/images/main/bred_bg.png);
+                background-position: 50%; background-size: cover;
+                .intro_circle_outer{ position: absolute; top: 0; left: 0;  -webkit-transform-origin: center center;
+                    transform-origin: center center;   width: 100%; height: 100%;
+                    .intro_circle_inner{ position: absolute; top: 0; left: 0; width: 100vw; height: 100vh;
+                        .intro--text{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;
+                            .intro__text--final{ position: absolute; top: -1.33333rem; left: -1.11111rem; width: calc(100% + -2.05556rem);
+                                height: 100%; padding: 2.22222rem; font-size: 13.88889rem; display: -webkit-box; display: flex;
+                                -webkit-box-align: end;  align-items: flex-end; -webkit-box-pack: justify; justify-content: space-between;
+                                line-height: 1; opacity: 1;  white-space: nowrap;
+                                span{  line-height: 1; @extend .ms }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+        
+    }
+}
+
+//css animation
+
+@-webkit-keyframes underlineHighlight {
+    0% {
+        -webkit-transform-origin: right center;
+        transform-origin: right center;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1)
+    }
+    80% {
+        -webkit-transform-origin: right center;
+        transform-origin: right center;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1)
+    }
+    90% {
+        -webkit-transform-origin: right center;
+        transform-origin: right center;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0)
+    }
+    91% {
+        -webkit-transform-origin: left center;
+        transform-origin: left center;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0)
+    }
+    to {
+        -webkit-transform-origin: left center;
+        transform-origin: left center;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1)
+    }
+}
+@keyframes underlineHighlight {
+    0% {
+        -webkit-transform-origin: right center;
+        transform-origin: right center;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1)
+    }
+    80% {
+        -webkit-transform-origin: right center;
+        transform-origin: right center;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1)
+    }
+    90% {
+        -webkit-transform-origin: right center;
+        transform-origin: right center;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0)
+    }
+    91% {
+        -webkit-transform-origin: left center;
+        transform-origin: left center;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0)
+    }
+    to {
+        -webkit-transform-origin: left center;
+        transform-origin: left center;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1)
+    }
+}
+
+
+
+
+@media( min-width: 700px ){
+    #contents{ 
+        .contents__area{
+            .intro__content{ 
+                .intro__grid{ 
+                    .intro__text{ width: 50%;
+                    }
+                }
+            }
+        }
+    }
+    
+}
