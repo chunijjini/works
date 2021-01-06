@@ -1,0 +1,17 @@
+
+
+//content Layout 
+@mixin contentsInner() {
+    width: 100%;
+    min-width: 1024px;
+    box-sizing: border-box;
+    padding: 0; 
+    margin: 0 auto; 
+}
+
+//clear
+@mixin clear(){ content: ''; display:block; clear: both; }
+
+
+
+

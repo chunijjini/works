@@ -5,6 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>heo jung won</title>
     <link rel="stylesheet" href="/assets/css/Main.css"> 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_u5buK0dt2PKAZ5q55oUiW');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 </head>
 <body>
     <body>
@@ -105,10 +128,10 @@
                         </div>
                     </section>
                     <!-- visual_wrap -->
-                    <section class="main_port port_renew">
+                    <section class="port_cont_wrap main_port port_renew">
                         <div class="port_title">
-                            <h3>PORTFOLIO</h3>
-                            <p class="sub_tit">현재까지 작업해온 포트폴리오를 확인하세요</p>
+                            <!-- <h3>PORTFOLIO</h3> -->
+                            <!-- <p class="sub_tit">현재까지 작업해온 포트폴리오를 확인하세요</p> -->
                         </div>
                         <ul class="port_list"> 
                             <li>
@@ -250,10 +273,9 @@
                         </div>
                     </section> 
                 </div>
-    
         
             </div>
-            <section>
+            <!-- <section>
                 <div class="inner">
                     <form>
                         <h2 class="blind">메일 보내기</h2>
@@ -309,8 +331,35 @@
  
                 </div> 
 
-            </section>
+            </section> -->
+            <section id="content">
+                <div class="inner">
+                    <div class="content_box">
+                        <form id="contact-form" class="form_box">
+                            <em>Email us</em>
+                            <ul class="form_list">
+                                <li>
+                                    <label>성함</label>
+                                    <input type="text" name="contact_number">
+                                </li>
+                                <li>
+                                    <label>휴대폰번호</label>
+                                    <input type="text" name="user_name">
+                                </li>
+                                <li>
+                                    <label>텍스트</label>
+                                    <input type="email" name="user_email">
+                                </li>
+                                <li>
+                                    <textarea name="message"></textarea>
+                                </li>
+                            </ul>
+                            <input type="submit" value="Send">
+                        </form>
+                    </div>
+                </div>
 
+            </section>
         </main>
      
         <!-- .content_wrap -->
@@ -318,54 +367,26 @@
         
         <!-- Footer -->
         <footer id="footer" class="footer">
-            <div class="ft_gnb_wrap inner">
+            <div class="ft_gnb_wrap">
                 <div class="ft_logo_box">
                     <a href="/" class="ft_logo"><img class="normal" src="./assets/images/footer/logo_ft.png" alt="Designart"></a>
-                    <dl class="ft_sns">
-                        <dt>FOLLOW US</dt>
-                        <dd><a href="https://blog.naver.com/dartplus" target="_blank" class="blog">블로그</a></dd>
-                    </dl>
                 </div>
-                <div class="ft_gnb">
-                    <dl>
-                        <dt>CUSTOMER</dt>
-                        <dd>
-                            <p class="for_pc">help@designart.co.kr<br/>T. 02-6953-6045<br/>F. 02-6953-6046</p>
-                            <p class="for_m"><strong>02-6953-6045</strong><br/>help@designart.co.kr<br/>F. 02-6953-6046</p>
-                            <div class="ft_btn">
-                                <a href="/design_new/sub05.php">견적문의</a>
-                                <a href="/design_new/sub05_visit.php">방문상담신청</a>
-                            </div>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt>OFFICE HOURS</dt>
-                        <dd>
-                            <p>평일 : <span>AM 09 ~ PM 06</span><br/>점심 : <span>PM 12 ~ PM 13</span><br/>주말은 휴무입니다.</p>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt>BANK INFO</dt>
-                        <dd>
-                            <p>873201-04-122929<br/>국민은행 (주)디자인아트플러스</p>
-                        </dd>
-                    </dl>
-                    <dl class="ft_gnb_last">
-                        <dt>QUICK</dt>
-                        <dd>
-                            <ul>
-                                <li><a href="./company.php">디자인아트소개</a></li>
-                                <li><a href="./protective.php">개인정보처리방침</a></li>
-                                <li><a href="./sub04.php">오시는길</a></li>
-                            </ul>
-                        </dd>
-                    </dl>
+                <div class="ft_sns_box">
+                    <ul class="sns_list">
+                        <li>
+                            <a href="javascript:;"><img src="/assets/images/header/icon_ft_sns_b.png" alt=""> </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><img src="/assets/images/header/icon_ft_sns_b.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><img src="/assets/images/header/icon_ft_sns_b.png" alt=""></a>
+                        </li>
+                    </ul>
+
                 </div>
             </div>
-            <div class="ft_btm_info inner "> 
-                <address class="ft_addr">
-                    주소 : 서울특별시 구로구 디지털로 243 지하이시티 501~502호<span class="m_br">/</span><br/>상호 : (주)디자인아트플러스<span class="m_br">/</span><br/>대표 : 임화연<span>/</span>사업자등록번호 : 113-86-05232<span class="m_br">/</span><br/>개인정보 정책 및 담당 : 임화연<span class="m_br">/</span><br/>통신판매업신고번호 : 제2008-서울구로-0978호
-                </address>
+            <div class="ft_copy_box">
                 <p class="ft_copy">copyright &copy; by Designart All Right Reserved.</p>
             </div>
         </footer>
@@ -373,7 +394,7 @@
  
    
     
-        </body>
+    </body>
     <script src="/assets/js/lib/jquery-1.11.2.min.js"></script>
     <script src="/assets/js/lib/swiper.min.js"></script>
     <script src="/assets/js/lib/gsap.min.js"></script>
