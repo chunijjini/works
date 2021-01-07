@@ -14,6 +14,7 @@
         var _sT;
         var _sections;
         var _isInSections;
+        var _btnSend;
 
 		function create(){
             _main = $( ".main" );
@@ -26,16 +27,18 @@
             _sections.each( function( $index ){
                 _isInSections.push(false);
             })
+            _btnSend = $( ".btn_send" );
         }
 
 		function addEvent() {
-            console.log( "addevent ");
+            console.log( "addevent" );
             resizeEvent( null );
             App.window.on( "reisze", resizeEvent );
             scrollEvent( null );
             App.window.on( "scroll", scrollEvent );
             mainSwiperInit();
             barSlideMotion();
+            _btnSend.on( "click", btnSendClick );
 
         }
 
@@ -150,6 +153,22 @@
         }
  
 
+        function btnSendClick(){
+            var templateParams = {	
+                    userName: $('input[name=name]').val(),
+                    userPhone: $('input[name=phone]').val(), 
+                    userEmail : $('input[name=email]').val(),
+                    message : $('textarea[name=message]').val()
+                };
+
+                emailjs.send('heojungwon', 'template_bifmba63', templateParams)
+                        .then(function(response) {
+                            alert( "메일 보내주셔서 감사합니다." )
+                            console.log('SUCCESS!', response.status, response.text);
+                        }, function(error) {
+                            console.log('FAILED...', error);
+                        });
+        }
      
         return{
 			Init: Init,

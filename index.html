@@ -12,22 +12,6 @@
             emailjs.init('user_u5buK0dt2PKAZ5q55oUiW');
         })();
     </script>
-    <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-                // generate a five digit number for the contact_number variable
-                this.contact_number.value = Math.random() * 100000 | 0;
-                // these IDs from the previous steps
-                emailjs.sendForm('contact_service', 'contact_form', this)
-                    .then(function() {
-                        console.log('SUCCESS!');
-                    }, function(error) {
-                        console.log('FAILED...', error);
-                    });
-            });
-        }
-    </script>
 </head>
 <body>
     <body>
@@ -340,21 +324,21 @@
                             <ul class="form_list">
                                 <li>
                                     <label>성함</label>
-                                    <input type="text" name="contact_number">
+                                    <input type="text" name="name" name="contact_number">
                                 </li>
                                 <li>
                                     <label>휴대폰번호</label>
-                                    <input type="text" name="user_name">
+                                    <input type="text " name="phone">
                                 </li>
                                 <li>
-                                    <label>텍스트</label>
-                                    <input type="email" name="user_email">
+                                    <label>이메일</label>
+                                    <input type="email" name="email">
                                 </li>
                                 <li>
                                     <textarea name="message"></textarea>
                                 </li>
                             </ul>
-                            <input type="submit" value="Send">
+                            <button  name="submit" class="btn_send">전송</button>
                         </form>
                     </div>
                 </div>
