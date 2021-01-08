@@ -9,8 +9,13 @@
 
 
         function Init(){
+            if( localStorage.getItem( "sub" ) === null ){
+                console.log( "같나?" );
+            }else{
+                console.log( "아닐떄" );
+            }
 			create();
-			addEvent();
+            addEvent();
         }
 
 		function create(){
@@ -27,10 +32,21 @@
 
 
         function menuListClick(){
-            pageLoad();
+            localStorage.setItem("key1", "sub"); //함수 이용. key-value
         }
 
-
+        var  getParameter = function (param) {
+            var returnValue;
+           
+           
+            for (var i = 0; i < parameters.length; i++) {
+                var varName = parameters[i].split('=')[0];
+                if (varName.toUpperCase() == param.toUpperCase()) {
+                    returnValue = parameters[i].split('=')[1];
+                    return decodeURIComponent(returnValue);
+                }
+            }
+        };
 
         function pageLoad(){
 
